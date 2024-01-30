@@ -5,7 +5,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Asas Virtuais WP
- * Version:           0.0.1
+ * Version:           0.0.2
  */
 
 try {
@@ -18,9 +18,8 @@ try {
         );
     } );
     require 'plugin-update-checker/plugin-update-checker.php';
-    use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
-    $myUpdateChecker = PucFactory::buildUpdateChecker(
+    $myUpdateChecker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
         'https://zaecss3tjp9agtdd.public.blob.vercel-storage.com/asasvirtuais-wp.json',
         __FILE__,
         'asasvirtuais-wp'
