@@ -17,6 +17,14 @@ try {
             'asasvirtuais-wp'
         );
     } );
+    require 'plugin-update-checker/plugin-update-checker.php';
+    use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+    $myUpdateChecker = PucFactory::buildUpdateChecker(
+        'https://zaecss3tjp9agtdd.public.blob.vercel-storage.com/asasvirtuais-wp.json',
+        __FILE__,
+        'asasvirtuais-wp'
+    );
 } catch (\Throwable $th) {
     error_log( $th );
 }
